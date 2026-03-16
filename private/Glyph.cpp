@@ -48,3 +48,19 @@ void Glyph::SetParent(Glyph* parent)
 {
     parent_ = parent;
 }
+
+void Glyph::AttachChild(Glyph* child)
+{
+    if (child != nullptr)
+    {
+        child->parent_ = this;
+    }
+}
+
+void Glyph::DetachChild(Glyph* child)
+{
+    if (child != nullptr && child->parent_ == this)
+    {
+        child->parent_ = nullptr;
+    }
+}

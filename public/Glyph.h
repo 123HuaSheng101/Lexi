@@ -22,6 +22,8 @@ public:
 
 protected:
     void SetParent(Glyph* parent);
+    void AttachChild(Glyph* child);
+    void DetachChild(Glyph* child);
 
 private:
     friend class Composition;
