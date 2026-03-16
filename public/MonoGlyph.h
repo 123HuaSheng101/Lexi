@@ -7,12 +7,13 @@
 class MonoGlyph : public Glyph
 {
 public:
-    explicit MonoGlyph(Glyph* component = nullptr);
+    explicit MonoGlyph(Glyph *component = nullptr);
     ~MonoGlyph() override;
 
+    virtual void Draw(Window *window) override;
 
-    void SetComponent(Glyph* component);
+    void SetComponent(Glyph *component);
 
 protected:
-    Glyph* component_;
+    Glyph *component_;
 };
